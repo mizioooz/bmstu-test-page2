@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кафедра ИУК2 МГТУ им. Баумана</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F8F8F8; /* Светлый фон */
+            color: #151617; /* Темный текст */
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            border-bottom: 1px solid #003DA5; /* Темно-синий для границы */
+        }
+        
+        .hero {
+            display: grid;
+            grid-template-columns: 60% 40%;
+            min-height: 500px;
+            margin: 40px 0;
+        }
+        
+        .hero-content {
+            padding: 40px;
+        }
+        
+        .hero-image {
+            background-image: url('https://imgproxy.gamma.app/resize/quality:80/resizing_type:fit/width:1200/https://cdn.gamma.app/f4hyy00edaugknw/generated-images/pIIIQIYb1jXzl6LTsESFR.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        h1 {
+            font-weight: 900;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #003DA5; /* Темно-синий для заголовков */
+        }
+        
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #005EB8; /* Светло-синий для кнопок */
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            margin-right: 10px;
+            margin-bottom: 10px; /* Отступ снизу */
+        }
+        
+        .btn:hover {
+            background-color: #003DA5; /* Темно-синий при наведении */
+        }
+        
+        .full-width-section {
+            position: relative;
+            min-height: 500px;
+            margin: 60px 0;
+        }
+        
+        .bg-image {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://imgproxy.gamma.app/resize/quality:80/resizing_type:fit/width:2400/https://cdn.gamma.app/f4hyy00edaugknw/generated-images/oeK0k9iad260iIaZHggC5.jpg');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.8;
+        }
+        
+        .content-overlay {
+            position: relative;
+            padding: 60px;
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: rgba(248, 236, 228, 0.85); /* Полупрозрачный фон */
+            text-align: left; /* Выравнивание по умолчанию для настольной версии */
+        }
+
+        /* Мобильные устройства */
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .hero {
+                grid-template-columns: 1fr; /* Один столбец */
+                min-height: 300px; /* Уменьшение высоты */
+            }
+            
+            .hero-content {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 2rem; /* Уменьшение размера заголовка */
+            }
+            
+            p {
+                font-size: 1rem; /* Уменьшение размера текста */
+            }
+
+            .hero-image {
+                height: 200px; /* Установка фиксированной высоты для изображения на мобильных устройствах */
+            }
+
+            .btn {
+                width: auto; /* Авто ширина для кнопок */
+                margin: 0; /* Убрали отступы */
+            }
+
+            .content-overlay {
+                padding: 30px; /* Уменьшение отступов */
+                text-align: center; /* Центрирование текста и кнопки на мобильных устройствах */
+            }
+
+            .buttons {
+                display: flex; /* Flexbox для кнопок */
+                justify-content: center; /* Центрирование кнопок */
+                flex-direction: column; /* Вертикальное расположение кнопок */
+                align-items: center; /* Центрирование по горизонтали */
+            }
+        }
+
+        /* Планшеты */
+        @media (max-width: 1024px) {
+            .hero {
+                grid-template-columns: 70% 30%; /* Изменение раскладки для планшетов */
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1><b>ИУК2</b></h1>
+            <nav>
+                <a href="#about" class="btn">О кафедре</a>
+                <a href="#contacts" class="btn">Контакты</a>
+            </nav>
+        </header>
+        
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Кафедра информатики и систем управления</h1>
+                <p>ИУК2 - одна из ведущих кафедр МГТУ им. Баумана, занимающаяся подготовкой специалистов в области информатики, автоматизации и управления.</p>
+                <div class="buttons">
+                    <a href="#info" class="btn">Подробнее</a>
+                    <a href="#footer" class="btn">Контакты</a>
+                </div>
+            </div>
+            <div class="hero-image"></div>
+        </section>
+        
+        <section id="info" class="full-width-section">
+            <div class="bg-image"></div>
+            <div class="content-overlay">
+                <h1>Образовательные программы</h1>
+                <p>Кафедра ИУК2 предлагает современные образовательные программы, сочетающие фундаментальные знания и практические навыки в области информационных технологий и систем управления.</p>
+                <div class="buttons">
+                    <a href="#programs" class="btn">Узнать больше</a>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <footer id="footer" style="background-color: #003DA5; color: white; padding: 40px 0; text-align: center;">
+        <div class="container">
+            <p>© 2025 Кафедра ИУК2 КФ МГТУ им. Баумана</p>
+            <p>Контактная информация: example@bmstu.ru</p>
+        </div>
+    </footer>
+</body>
+</html>
