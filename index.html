@@ -128,7 +128,7 @@
 
             .btn {
                 width: auto; /* Авто ширина для кнопок */
-                margin: 0; /* Убрали отступы */
+                margin: 0 0 15px 0; /* Отступ только снизу для мобильных устройств */
             }
 
             .content-overlay {
@@ -141,6 +141,11 @@
                 justify-content: center; /* Центрирование кнопок */
                 flex-direction: column; /* Вертикальное расположение кнопок */
                 align-items: center; /* Центрирование по горизонтали */
+            }
+            
+            /* Добавляем отступ между кнопками в мобильной версии */
+            .buttons .btn:not(:last-child) {
+                margin-bottom: 15px;
             }
         }
 
